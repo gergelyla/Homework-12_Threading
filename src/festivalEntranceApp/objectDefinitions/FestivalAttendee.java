@@ -4,8 +4,8 @@ public class FestivalAttendee {
     private String attendeeName;
     private TicketTypes ticketType;
 
-    public FestivalAttendee(TicketTypes ticketType){
-        this.ticketType=ticketType;
+    public FestivalAttendee(TicketTypes ticketType) {
+        this.ticketType = ticketType;
     }
 
     public TicketTypes getTicketType() {
