@@ -10,16 +10,16 @@ public class FestivalGate {
     private int oneDayPassAmmount = 0;
     private int oneDayVipPassAmmount = 0;
 
-    Queue<FestivalAttendee> gateQeue = new LinkedList();
+    Queue<FestivalAttendee> gateQueue = new LinkedList();
 
 
     public synchronized void newAttendeeAtTheGate(FestivalAttendee festivalAttendee) {
-        gateQeue.add(festivalAttendee);
+        gateQueue.add(festivalAttendee);
     }
 
     public synchronized void gateStatisticAtSpecificMoment() {
-        for (int i = 0; i < gateQeue.size(); i++) {
-            switch (/*member*/gateQeue.poll().getTicketType()) {
+        for (int i = 0; i < gateQueue.size(); i++) {
+            switch (/*member*/gateQueue.poll().getTicketType()) {
                 case FULL_PASS:
                     fullPassAmmount = fullPassAmmount + 1;
                     break;
@@ -45,6 +45,6 @@ public class FestivalGate {
         System.out.println("Amount of One Day Passes: " + oneDayPassAmmount);
         System.out.println("Amount of One Day VIP Passes: " + oneDayVipPassAmmount);
         System.out.println("-----------------------------------------------------------------");
-        System.out.println("Qeue size: " + gateQeue.size());
+        System.out.println("Queue size: " + gateQueue.size());
     }
 }

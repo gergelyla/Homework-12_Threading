@@ -9,7 +9,7 @@ public class StatisticalThread extends Thread {
 
     @Override
     public void run() {
-        while (gate.gateQeue.size() != 0) {
+        while (gate.gateQueue.size() != 0) {
             System.out.println(currentThread().getName());
             System.out.println("-----------------------------------------------------------------");
             System.out.println("Ticket statistics at certain point: ");
