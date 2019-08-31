@@ -39,6 +39,10 @@ public class FestivalGate {
                     break;
             }
         }
+        printQueueData();
+    }
+
+    private void printQueueData() {
         System.out.println("Amount of Full Passes: " + fullPassAmmount);
         System.out.println("Amount of Full VIP Passes: " + fullVipPassAmmount);
         System.out.println("Amount of Free Passes: " + freePassAmmount);
