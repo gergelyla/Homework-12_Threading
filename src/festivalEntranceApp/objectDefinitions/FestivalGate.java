@@ -49,6 +49,8 @@ public class FestivalGate {
         System.out.println("Amount of One Day Passes: " + oneDayPassAmmount);
         System.out.println("Amount of One Day VIP Passes: " + oneDayVipPassAmmount);
         System.out.println("-----------------------------------------------------------------");
-        System.out.println("Queue size: " + gateQueue.size());
+        System.out.println("A total of " + (fullPassAmmount + fullVipPassAmmount + freePassAmmount + oneDayPassAmmount + oneDayVipPassAmmount) + " attendees have passed gate/ticket validation!");
+        System.out.println("Number of attendees remaining in qeue: " + gateQueue.size());
+        System.out.println("");
     }
 }

@@ -9,16 +9,23 @@ public class StatisticalThread extends Thread {
 
     @Override
     public void run() {
+        try {
+            currentThread().sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         while (gate.gateQueue.size() != 0) {
             System.out.println(currentThread().getName());
             System.out.println("-----------------------------------------------------------------");
-            System.out.println("Ticket statistics at certain point: ");
+            System.out.println("Total ticket statistics at certain point: ");
             gate.gateStatisticAtSpecificMoment();
-            System.out.println("Sleeeeeeeping...5...4...3...2...1 ");
-            try {
-                currentThread().sleep(5000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+            if (gate.gateQueue.size() != 0) {
+                System.out.println("Sleeeeeeeping...5...4...3...2...1 ");
+                try {
+                    currentThread().sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
         System.out.println(" ");
